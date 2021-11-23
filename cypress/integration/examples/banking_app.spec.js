@@ -9,6 +9,7 @@ describe('Working with inputs', () => {
 		it('Open the login page', () => {
 			cy.visit('http://zero.webappsecurity.com/login.html')
 			cy.clearCookies({log: true})
+			cy.title().should('include', 'Zero')
 		})
 
 		it('Enter the username', () => {
